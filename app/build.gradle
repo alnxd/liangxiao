@@ -1,0 +1,49 @@
+import com.android.build.gradle.AppPlugin
+import proguard.gradle.ProGuardTask
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '24.0.3'
+
+    defaultConfig {
+        applicationId "zhoushi.ist"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories{
+         flatDir { dirs 'libs' }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/gson-2.5.jar')
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'org.xutils:xutils:3.3.25'
+    compile 'com.android.support:percent:24.1.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.Aspsine:SwipeToLoadLayout:1.0.3'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    compile(name:'Library-release', ext:'aar')
+    compile(name:'pullToRefresh-release', ext:'aar')
+    compile(name:'kanner-release',ext:'aar')
+    compile(name:'pullToRefreshListFragment-release', ext:'aar')
+    compile(name:'pullToRefreshViewPager-release', ext:'aar')
+    compile 'com.github.arimorty:floatingsearchview:2.0.1'
+    compile 'com.github.arimorty:floatingsearchview:1.0.1'
+
+}

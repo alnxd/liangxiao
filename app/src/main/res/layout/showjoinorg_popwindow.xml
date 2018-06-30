@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"  >
+
+        <LinearLayout
+            android:id="@+id/pop_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/create_org_background"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|bottom">
+
+            <TextView
+                android:id="@+id/org_jianjie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#33cbcc"
+                android:text="申请理由"
+                android:textSize="24dp" />
+
+            <EditText
+                android:id="@+id/jionOrgSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="textMultiLine"
+                android:gravity="top|left"
+                android:maxLines="8"
+                android:minLines="5" />
+
+
+            <Button
+                android:id="@+id/joinOrg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/create_org"
+                android:text="确定"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/cancleJoin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/create_org"
+                android:text="取消"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

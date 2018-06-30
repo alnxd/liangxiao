@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="zhoushi.ist"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity
+            android:name=".viewpage.WelcomeApp"  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.ZHTabActivity" />
+        <activity android:name=".activity.office.OfficeMainActivity"/>
+        <activity android:name=".viewpage.Guide"></activity>
+        <activity android:name=".activity.CreateOrgActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".activity.OrgDetailActivity"/>
+        <activity android:name=".activity.office.OfficeApplyOrgActivity" />
+        <activity android:name=".activity.JoinOrgListActivity" />
+        <activity android:name=".activity.JoinOrgDetailActivity" />
+        <activity android:name=".activity.ist.actuvity.ActDetailActivity"/>
+        <activity android:name=".activity.ist.actuvity.CreateActActivity"/>
+        <activity android:name=".activity.office.OfficeApplyActActivity"/>
+        <activity android:name=".activity.PhotoWallActivity"/>
+        <activity android:name=".activity.PhotoSelectActivity"/>
+        <activity android:name=".activity.OrgActListActivity"/>
+        <activity android:name=".activity.MemberListActivity"/>
+        <activity android:name=".activity.ist.actuvity.JoinActListActivity" />
+        <activity android:name=".activity.ist.actuvity.JoinActDetailActivity" />
+        <activity android:name=".activity.InterfaceActivity">
+            <intent-filter>
+                 <action android:name="android.intent.action.VIEW"/>
+                 <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

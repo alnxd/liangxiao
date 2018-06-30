@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#3dd5da"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:id="@+id/btn_back"
+            android:background="@drawable/arrow_left"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:text="社团申请"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_back"
+            android:id="@+id/tv_my_name"
+            android:layout_alignBottom="@+id/btn_back"
+            android:layout_marginLeft="18dp"
+            />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/org_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="社团名称"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/edit_org_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/org_name"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/org_name"
+                    android:layout_alignTop="@+id/org_name"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="90dp"
+                    android:background="@null"
+                    android:singleLine="true" />
+
+
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/org_name"
+                    android:layout_marginTop="8dp"
+                    android:background="#f2efef" />
+
+                <TextView
+                    android:id="@+id/org_categary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="社团类型"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/edit_org_categary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/edit_org_name"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/edit_org_name"
+                    android:layout_alignTop="@+id/org_categary"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:singleLine="true" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/org_categary"
+                    android:layout_marginTop="8dp"
+                    android:background="#f2efef" />
+
+
+                <TextView
+                    android:id="@+id/org_yuanxi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="社团院系"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/edit_org_yuanxi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/edit_org_categary"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/edit_org_categary"
+                    android:layout_alignTop="@+id/org_yuanxi"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:singleLine="true" />
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/org_yuanxi"
+                    android:layout_marginTop="8dp"
+                    android:background="#f2efef" />
+
+
+                <TextView
+                    android:id="@+id/org_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view4"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="社团级别"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/edit_org_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/edit_org_categary"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/edit_org_categary"
+                    android:layout_alignTop="@+id/org_level"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:singleLine="true" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/org_level"
+                    android:layout_marginTop="8dp"
+                    android:background="#f2efef" />
+
+
+                <TextView
+                    android:id="@+id/org_jianjie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/org_level"
+                    android:layout_alignStart="@+id/org_level"
+                    android:layout_alignTop="@+id/view3"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="8dp"
+                    android:text="社团简介"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/edit_org_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/org_jianjie"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignStart="@+id/org_jianjie"
+                    android:layout_below="@+id/org_jianjie"
+                    android:layout_marginRight="20dp"
+                    android:background="#f2efef"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:minLines="8" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/apply_org_agree"
+                android:layout_width="85dp"
+                android:layout_height="33dp"
+                android:layout_alignBottom="@+id/view3"
+                android:layout_alignLeft="@+id/edit_org_level"
+                android:layout_alignStart="@+id/edit_org_level"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginLeft="100dp"
+                android:layout_marginBottom="6dp"
+                android:textColor="#fffefe"
+                android:background="#f7aeae"
+                android:textSize="18dp"
+                android:text="同意"
+                />
+
+            <Button
+                android:id="@+id/apply_org_disagree"
+                android:layout_width="86dp"
+                android:layout_height="33dp"
+                android:layout_alignBottom="@+id/view3"
+                android:layout_alignLeft="@+id/edit_org_level"
+                android:layout_alignStart="@+id/edit_org_level"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fffefe"
+                android:background="#f7aeae"
+                android:textSize="18dp"
+                android:text="拒绝"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

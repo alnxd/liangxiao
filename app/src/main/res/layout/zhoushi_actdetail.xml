@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#bee6c9"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/btn_back"
+            android:background="@drawable/arrow_left"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="活动信息"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_my_name"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_back"
+            android:layout_toEndOf="@+id/btn_back" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/org_detail_sv"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:weightSum="1"
+                android:background="@drawable/detailbg">
+
+                <zhoushi.ist.controls.RoundImageView
+                    android:id="@+id/st_tupian"
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/app_logo"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:text="活动成员"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:id="@+id/textView11"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/orgMember"
+                    android:text="28人"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/btn_photo_member"
+                    android:layout_toStartOf="@+id/btn_photo_member"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentTop="true" />
+                <zhoushi.ist.controls.horizontalscrollview.MyHorizontalScrollView
+                    android:id="@+id/id_horizontalScrollView_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="bottom"
+                    android:scrollbars="none"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView11"
+                    android:fillViewport="false">
+
+                    <LinearLayout
+                        android:id="@+id/id_gallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </zhoushi.ist.controls.horizontalscrollview.MyHorizontalScrollView>
+                <ImageButton
+                    android:background="@drawable/arrow_right"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_weight="0.05"
+                    android:id="@+id/btn_photo_member"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_above="@+id/id_horizontalScrollView"
+                    android:alpha="0.5" />
+
+            </RelativeLayout>
+            <ImageView
+                android:background="#f2efef"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:text="活动照片"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/textView12"
+                    android:textColor="@color/black" />
+                <ImageButton
+                    android:id="@+id/btn_photowall"
+                    android:background="@drawable/arrow_right"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+                <zhoushi.ist.controls.horizontalscrollview.MyHorizontalScrollView
+                    android:id="@+id/id_horizontalScrollView_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_gravity="bottom"
+                    android:scrollbars="none"
+                    android:layout_below="@+id/textView12"
+                    android:layout_alignRight="@+id/btn_photowall"
+                    android:layout_alignEnd="@+id/btn_photowall">
+                    <LinearLayout
+                        android:id="@+id/id_gallery_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </zhoushi.ist.controls.horizontalscrollview.MyHorizontalScrollView>
+            </RelativeLayout>
+            <ImageView
+                android:background="#f2efef"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:text="所属社团"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/orgOwnerType"
+                    android:text="计算机社团"
+                    android:textSize="18dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textView4"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <ImageView
+                android:background="#f2efef"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:text="活动类型"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/orgType"
+                    android:text="体育"
+                    android:textSize="18dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <ImageView
+                android:background="#f2efef"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+            <TextView
+                android:text="活动简介: 巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉"
+                android:textSize="18dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/orgSummarytitle" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:background="#f2efef"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/orgApprove"
+            android:text="申请列表"
+            android:textSize="15dp"
+            android:textColor="#050505"
+            android:background="@drawable/create_org"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

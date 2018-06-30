@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cate">
+        <item>网球社团</item>
+        <item>足球社团</item>
+        <item>篮球社团</item>
+        <item>排球社团</item>
+        <item>滑轮社团</item>
+    </string-array>
+</resources>

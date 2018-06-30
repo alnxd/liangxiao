@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"  >
+
+        <LinearLayout
+            android:id="@+id/pop_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/create_org_background"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|bottom">
+
+
+            <Button
+                android:id="@+id/btn_create_org"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/create_org"
+                android:text="创社团"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_createactivity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/create_org"
+                android:text="创活动"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/create_org"
+                android:text="取消"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
